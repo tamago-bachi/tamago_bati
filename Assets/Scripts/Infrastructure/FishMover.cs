@@ -32,9 +32,9 @@ public class FishMover : MonoBehaviour
     }
     void SetRandomDirection()
     {
-        float x = Random.Range(0, 360),
+        float x = Random.Range(-90, 90),
                     y = Random.Range(0, 360),
-                    z = Random.Range(0, 360);
+                    z = 0;//Random.Range(0, 360);
         transform.rotation =
         Quaternion.Euler(new Vector3(x, y, z));
     }
