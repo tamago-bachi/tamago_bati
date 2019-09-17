@@ -8,7 +8,7 @@ namespace Domain
     {
         DevelopmentLevel developmentLevel = DevelopmentLevel.Level1;
         uint totalScore = 0;
-        public event Action<DevelopmentLevel> DevelopmentLevelChenged;
+        public event Action<DevelopmentLevel> DevelopmentLevelChanged;
 
         //スコアを加算する関数
         public void AddScore(uint score)
@@ -18,10 +18,9 @@ namespace Domain
             if (level != developmentLevel)
             {
                 developmentLevel = level;
-                DevelopmentLevelChenged?.Invoke(developmentLevel);
+                DevelopmentLevelChanged?.Invoke(developmentLevel);
             }
-        }
-        
+        }       
         //内部の発展度状態を変える関数
         static DevelopmentLevel ChangeDevelopmentLevel(uint totalScore)
         {
@@ -45,7 +44,6 @@ namespace Domain
             {
                 return DevelopmentLevel.Level1;
             }
-        }
-        
+        }       
     }
 }
