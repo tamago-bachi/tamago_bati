@@ -49,3 +49,9 @@ MonoBehaviour:
   fishA: {fileID: 7168612897940276111, guid: fa2ce0727b31907439256cd00ac2d760, type: 3}
   fishB: {fileID: 1136014958318421067, guid: d3c340441941ed447a82b49e37294324, type: 3}
   fishC: {fileID: 1354613605733054844, guid: d775f44572429b44893d23f2c14eebdd, type: 3}
+  piranhaA: {fileID: 1360358954107387525, guid: 70b27c89941dd444fb6a592d48006331,
+    type: 3}
+  piranhaB: {fileID: 4920854573118401730, guid: e4f5d78299e353641aacf282a26d19d5,
+    type: 3}
+  piranhaC: {fileID: 2195475973697216031, guid: c4bdc20e3e52d994ebeb6fae3c8ac604,
+    type: 3}

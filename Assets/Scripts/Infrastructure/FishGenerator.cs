@@ -2,6 +2,7 @@ using Domain;
 using UnityEngine;
 using UnityEngine.SocialPlatforms;
 using System.Collections;
+using System.Collections.Generic;
 
 namespace Infrastructure
 {
@@ -14,53 +15,31 @@ namespace Infrastructure
         [SerializeField] GameObject fishA;
         [SerializeField] GameObject fishB;
         [SerializeField] GameObject fishC;
-        
+        [SerializeField] GameObject piranhaA;
+        [SerializeField] GameObject piranhaB;
+        [SerializeField] GameObject piranhaC;
+        Dictionary<EggRank, GameObject[]> fishDictionary;
+
+        void Awake()
+        {
+            fishDictionary = new Dictionary<EggRank, GameObject[]>()
+            {
+                {EggRank.A, new GameObject[] {tunaA, fishA, piranhaA}},
+                {EggRank.B, new GameObject[] {tunaB, fishB, piranhaB}},
+                {EggRank.C, new GameObject[] {tunaC, fishC, piranhaC}}
+            };
+        }
+
         //ランクによって生成する魚を決める関数
         public void GenerateFish(EggRank rank)
         {
-            GameObject generate = null;
-            switch (rank)
+            if (rank == EggRank.Nothing)
             {
-                case EggRank.A:
-                    if (Random.Range(0, 2) == 0)
-                    {
-                        generate = tunaA;
-                    }
-                    else
-                    {
-                        generate = fishA;
-                    }
-                    break;
-                case EggRank.B:
-                    if (Random.Range(0, 2) == 0)
-                    {
-                        generate = tunaB;
-                    }
-                    else
-                    {
-                        generate = fishB;
-                    }
-                    break;
-                case EggRank.C:
-                    if (Random.Range(0, 2) == 0)
-                    {
-                        generate = tunaC;
-                    }
-                    else
-                    {
-                        generate = fishC;
-                    }
-
-                    break;
-                default:
-                    break;
+                return;
             }
-            if (generate != null)
-            {
-                var instance = Instantiate(generate);
-                  instance.transform.position=new Vector3(0,0,-5);
-                  instance.AddComponent<FishMover>();
-            }
+            var instance = Instantiate(fishDictionary[rank][Random.Range(0, 3)]);
+            instance.transform.position = new Vector3(0, 0, -5);
+            instance.AddComponent<FishMover>();
         }
     }
 }

@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   imageSelectButton: {fileID: 0}
-  fishGenerator: {fileID: 5844756947313839447, guid: e789c68b8699448abbf59ef70780c3bf,
+  fishGeneratorPrefab: {fileID: 5844756947313839447, guid: e789c68b8699448abbf59ef70780c3bf,
     type: 3}
   seaObjectGenerator: {fileID: 426775891630336660, guid: 5b1cc1b5a1d1e044c8c896bfb246a063,
     type: 3}

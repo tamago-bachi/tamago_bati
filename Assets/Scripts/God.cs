@@ -7,13 +7,14 @@ using UnityEngine;
 public class God : MonoBehaviour
 {
     [SerializeField] ImageSelectButton imageSelectButton;
-    [SerializeField] FishGenerator fishGenerator;
+    [SerializeField] FishGenerator fishGeneratorPrefab;
     [SerializeField] SeaObjectGenerator seaObjectGenerator;
     [SerializeField] ParticleGenerator particleGenerator;
 
     // Start is called before the first frame update
     void Start()
     {
+        var fishGenerator = Instantiate(fishGeneratorPrefab);
         var developmentLevelManager = new DevelopmentLevelManager();
         imageSelectButton.clicked += () =>
         {
