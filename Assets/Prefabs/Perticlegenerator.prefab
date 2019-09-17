@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &8423876445761007982
+--- !u!1 &7526401191187030224
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,44 +8,46 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8423876445761008272}
-  - component: {fileID: 8423876445761008273}
+  - component: {fileID: 979091237372634591}
+  - component: {fileID: 1115018285331031846}
   m_Layer: 0
-  m_Name: God
+  m_Name: Perticlegenerator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8423876445761008272
+--- !u!4 &979091237372634591
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8423876445761007982}
+  m_GameObject: {fileID: 7526401191187030224}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 762.8866, y: 114.931046, z: -211.95544}
+  m_LocalPosition: {x: -0.27381498, y: -0.5559594, z: -5.959606}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8423876445761008273
+--- !u!114 &1115018285331031846
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8423876445761007982}
+  m_GameObject: {fileID: 7526401191187030224}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ed52b90afd62bc45b26e5ae916a9b74, type: 3}
+  m_Script: {fileID: 11500000, guid: 986236ab616b46818638822b0394d345, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  imageSelectButton: {fileID: 0}
-  fishGenerator: {fileID: 5844756947313839447, guid: e789c68b8699448abbf59ef70780c3bf,
+  particleA: {fileID: 2379339744936942576, guid: 596070279e96746309fab0e32eb8cb8f,
     type: 3}
-  seaObjectGenerator: {fileID: 426775891630336660, guid: 5b1cc1b5a1d1e044c8c896bfb246a063,
-  particleGenerator: {fileID: 1115018285331031846, guid: f4ea9c2f47cc74ce6bb79a8669b40b73,
+  particleB: {fileID: 5410973369640553580, guid: 315cf64e5e95f4e88844bf301378583c,
+    type: 3}
+  particleC: {fileID: 2705594079803851237, guid: 2892fb2371cf3422a96bd46cd9683f9c,
+    type: 3}
+  particleNothing: {fileID: 6901315152443055926, guid: 26ac8543cdf9446c9aa1fe87e99a5c5b,
     type: 3}

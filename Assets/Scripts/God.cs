@@ -9,6 +9,7 @@ public class God : MonoBehaviour
     [SerializeField] ImageSelectButton imageSelectButton;
     [SerializeField] FishGenerator fishGenerator;
     [SerializeField] SeaObjectGenerator seaObjectGenerator;
+    [SerializeField] ParticleGenerator particleGenerator;
 
     // Start is called before the first frame update
     void Start()
@@ -21,6 +22,7 @@ public class God : MonoBehaviour
             //ToDo　ここでfilepathからランク判定して、魚の生成とスコア加算処理する
             var rank = new EggDishesRankChecker().EggDishImageToRank(filePath);
             fishGenerator.GenerateFish(rank);
+            particleGenerator.GenerateParticle(rank);
             var score = new ScoreTransformer().GetScoreFromRank(rank);
             developmentLevelManager.AddScore(score);
         };
