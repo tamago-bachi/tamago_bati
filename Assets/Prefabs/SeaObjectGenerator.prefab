@@ -45,6 +45,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   islandPrefab: {fileID: 4450524239575428432, guid: 90a298c05bc9baa4483c11bc86bbc8b8,
     type: 3}
+  coralReefPrefab: {fileID: 2596483870741654537, guid: 46aebeb3362bbb549a2f25d7fd0d66ed,
+    type: 3}
   palmTreePrefab: {fileID: 7107353371349376419, guid: 656050af6454cba4babfa247eecac7f5,
     type: 3}
   submarineVolcanoPrefab: {fileID: 6698862525250582529, guid: 9d3a19ba4dbc4bf4692741f56dec8bf2,
