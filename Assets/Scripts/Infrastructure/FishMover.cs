@@ -14,6 +14,7 @@ public class FishMover : MonoBehaviour
     void Start()
     {
         speed = Random.Range(0.5f, 2f);
+        transform.localScale = transform.localScale * Random.Range(0.4f, 1.1f);
     }
 
     // Update is called once per frame
