@@ -8,10 +8,10 @@ namespace Domain
         readonly EggWord[] list =
         {
             new EggWord("Tamagoyaki", EggRank.B),
-            new EggWord("medamayaki", EggRank.C),
-            new EggWord("scrambledEggs", EggRank.C),
-            new EggWord("tyawanmusi", EggRank.A),
-            new EggWord("mamedoufu", EggRank.B)
+            new EggWord("Fried egg", EggRank.C),
+            new EggWord("Scrambled eggs", EggRank.C),
+            new EggWord("Chawanmushi", EggRank.A),
+            new EggWord("Egg tofu", EggRank.B)
         };
 
         //卵料理のワードからEggRankを取得する
