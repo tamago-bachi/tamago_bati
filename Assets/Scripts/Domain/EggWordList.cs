@@ -7,7 +7,7 @@ namespace Domain
     {
         readonly EggWord[] list =
         {
-            new EggWord("dasimaki", EggRank.B),
+            new EggWord("Tamagoyaki", EggRank.B),
             new EggWord("medamayaki", EggRank.C),
             new EggWord("scrambledEggs", EggRank.C),
             new EggWord("tyawanmusi", EggRank.A),
