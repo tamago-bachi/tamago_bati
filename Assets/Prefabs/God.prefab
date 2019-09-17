@@ -47,5 +47,6 @@ MonoBehaviour:
   fishGenerator: {fileID: 5844756947313839447, guid: e789c68b8699448abbf59ef70780c3bf,
     type: 3}
   seaObjectGenerator: {fileID: 426775891630336660, guid: 5b1cc1b5a1d1e044c8c896bfb246a063,
+    type: 3}
   particleGenerator: {fileID: 1115018285331031846, guid: f4ea9c2f47cc74ce6bb79a8669b40b73,
     type: 3}
