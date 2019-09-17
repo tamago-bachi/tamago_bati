@@ -8,6 +8,7 @@ public class God : MonoBehaviour
 {
     [SerializeField] ImageSelectButton imageSelectButton;
     [SerializeField] FishGenerator fishGenerator;
+    [SerializeField] SeaObjectGenerator seaObjectGenerator;
 
     // Start is called before the first frame update
     void Start()
@@ -16,7 +17,7 @@ public class God : MonoBehaviour
         imageSelectButton.clicked += () =>
         {
             var filePath = new ImgFileDialog().OpenDialogAndGetFilePath();
-            
+
             //ToDo　ここでfilepathからランク判定して、魚の生成とスコア加算処理する
             var rank = new EggDishesRankChecker().EggDishImageToRank(filePath);
             fishGenerator.GenerateFish(rank);
@@ -25,7 +26,7 @@ public class God : MonoBehaviour
         };
         developmentLevelManager.DevelopmentLevelChanged += developmentLevel =>
         {
-            Debug.Log(developmentLevel);
+            seaObjectGenerator.GenerateSeaObject(developmentLevel);
         };
     }
 }
