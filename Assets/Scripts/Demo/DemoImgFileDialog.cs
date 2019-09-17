@@ -8,8 +8,8 @@ namespace Demo
     {
         void Start()
         {
-            var filePath = new ImgFileDialog().OpenDialogAndGetFilePath();
-            Debug.Log(filePath);
+            string filepath = new ImgFileDialog().OpenDialogAndGetFilePath();
+            Debug.Log(filepath);
         }
     }
 }
