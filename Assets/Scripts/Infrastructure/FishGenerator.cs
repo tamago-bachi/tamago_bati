@@ -57,7 +57,7 @@ namespace Infrastructure
             }
             if (generate != null)
             {
-                Instantiate(generate);
+                Instantiate(generate).transform.position=new Vector3(0,0,-2);
             }
         }
     }
