@@ -8,12 +8,12 @@ namespace Infrastructure
     //ランクによって魚を生成するクラス
     public class FishGenerator : MonoBehaviour
     {
-        [SerializeField] private GameObject tunaA;
-        [SerializeField] private GameObject tunaB;
-        [SerializeField] private GameObject tunaC;
-        [SerializeField] private GameObject fishA;
-        [SerializeField] private GameObject fishB;
-        [SerializeField] private GameObject fishC;
+        [SerializeField] GameObject tunaA;
+        [SerializeField] GameObject tunaB;
+        [SerializeField] GameObject tunaC;
+        [SerializeField] GameObject fishA;
+        [SerializeField] GameObject fishB;
+        [SerializeField] GameObject fishC;
         
         //ランクによって生成する魚を決める関数
         public void GenerateFish(EggRank rank)
@@ -57,7 +57,9 @@ namespace Infrastructure
             }
             if (generate != null)
             {
-                Instantiate(generate);
+                var instance = Instantiate(generate);
+                  instance.transform.position=new Vector3(0,0,-2);
+                  instance.AddComponent<FishMover>();
             }
         }
     }
