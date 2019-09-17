@@ -1,57 +1,61 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class FishMover : MonoBehaviour
 {
-    int count = MAX_COUNT;
-    const int MAX_COUNT = 180;
-    Vector3 direction = new Vector3(0, 0, 0);
+    int count = 0;
+    float speed;
 
+    const int MAX_COUNT = 60;
 
-    // Start is called befoe the first frame update
     void Start()
     {
-
+        speed = Random.Range(0.5f, 2f);
     }
 
     // Update is called once per frame
     void Update()
     {
-
-        count -= 1;
-        //if (count == 0) {
-
-                //SetRandomDirection();               
-               //count = MAX_COUNT;
-            
-        //}
-        //transform.rotation(rotation);
-        transform.position += transform.forward / 100;
-        //Debug.Log("");
+        count--;
+        transform.position += transform.forward / 100 * speed;
     }
+
     void SetRandomDirection()
     {
         float x = Random.Range(-90, 90),
-                    y = Random.Range(0, 360),
-                    z = 0;//Random.Range(0, 360);
+            y = Random.Range(0, 360),
+            z = 0; //Random.Range(0, 360);
         transform.rotation =
-        Quaternion.Euler(new Vector3(x, y, z));
+            Quaternion.Euler(new Vector3(x, y, z));
     }
+
     void FixedUpdate()
     {
         if (CheckWall())
         {
             SetRandomDirection();
+            count = MAX_COUNT;
         }
-
+        else
+        {
+            if (Input.GetMouseButton(0) && count < 0)
+            {
+                var mousePos = Input.mousePosition;
+                mousePos.z = 6;
+                var worldMousePos = Camera.main.ScreenToWorldPoint(mousePos);
+                transform.LookAt(worldMousePos);
+            }
+        }
     }
-    bool CheckWall() {
+
+    bool CheckWall()
+    {
         //int wallMask = LayerMask.NameToLayer("Wall");
-        var rayResult = Physics.Raycast(transform.position, transform.forward,1.0f);
+        var rayResult = Physics.Raycast(transform.position, transform.forward, 1.0f);
         Debug.DrawRay(transform.position, transform.forward * 1.0f, Color.red, 5);
         return rayResult;
     }
-
-
 }
