@@ -58,7 +58,7 @@ namespace Infrastructure
             if (generate != null)
             {
                 var instance = Instantiate(generate);
-                  instance.transform.position=new Vector3(0,0,-2);
+                  instance.transform.position=new Vector3(0,0,-5);
                   instance.AddComponent<FishMover>();
             }
         }
