@@ -11,7 +11,19 @@ namespace Domain
             new EggWord("Fried egg", EggRank.C),
             new EggWord("Scrambled eggs", EggRank.C),
             new EggWord("Chawanmushi", EggRank.A),
-            new EggWord("Egg tofu", EggRank.B)
+            new EggWord("Egg tofu", EggRank.B),
+            new EggWord("Oyakodon", EggRank.A), 
+            new EggWord("Katsudon", EggRank.B), 
+            new EggWord("玉子丼", EggRank.B), 
+            new EggWord("Egg", EggRank.C), 
+            new EggWord("Yolk", EggRank.C), 
+            new EggWord("Tamago kake gohan", EggRank.C), 
+            new EggWord("Boiled egg", EggRank.B), 
+            new EggWord("Onsen tamago", EggRank.B), 
+            new EggWord("Chicken egg", EggRank.C), 
+            new EggWord("たまごふわふわ", EggRank.A), 
+            new EggWord("Omelette", EggRank.B), 
+            new EggWord("Spanish omelette", EggRank.A) 
         };
 
         //卵料理のワードからEggRankを取得する
