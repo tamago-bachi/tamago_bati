@@ -1,17 +1,26 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class FishMover : MonoBehaviour
 {
     int count = 0;
+    float speed;
 
     const int MAX_COUNT = 60;
+
+    void Start()
+    {
+        speed = Random.Range(0.5f, 2f);
+    }
+
     // Update is called once per frame
     void Update()
     {
         count--;
-        transform.position += transform.forward / 100;
+        transform.position += transform.forward / 100 * speed;
     }
 
     void SetRandomDirection()
@@ -32,7 +41,7 @@ public class FishMover : MonoBehaviour
         }
         else
         {
-            if (Input.GetMouseButton(0)&&count<0)
+            if (Input.GetMouseButton(0) && count < 0)
             {
                 var mousePos = Input.mousePosition;
                 mousePos.z = 6;
