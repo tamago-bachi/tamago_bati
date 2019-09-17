@@ -44,3 +44,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   imageSelectButton: {fileID: 0}
+  fishGenerator: {fileID: 5844756947313839447, guid: e789c68b8699448abbf59ef70780c3bf,
+    type: 3}

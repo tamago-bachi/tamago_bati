@@ -8,7 +8,7 @@ namespace Demo
     {
         public class DemoFishGenerator : MonoBehaviour
         {
-            [SerializeField] private FishGenerator fishGenerator;
+            [SerializeField] FishGenerator fishGenerator;
             void Start()
             {
                 fishGenerator.GenerateFish(EggRank.B);
